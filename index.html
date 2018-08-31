@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
+
+<head>
+
+<title>Игра: найдите одинаковые картинки</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+<meta name="Description" content="">
+<meta name="Keywords" content="">
+
+
+<link href='http://fonts.googleapis.com/css?family=Ruslan+Display&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+
+<script src="js/jquery.fullscreen-min.js" type="text/javascript"></script>
+
+<script src="game.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="game.css" media="screen"/>
+
+</head>
+
+<BODY style="MARGIN: 0px; PADDING: 0px; TEXT-ALIGN: center;">
+
+<div id="game_container">
+<div id="game">
+	<div id="hide_cards"></div>
+	<div>
+		<div class="frame"></div>
+		<div class="frame"></div>
+		<div class="frame"></div>
+		<div class="frame"></div>
+	</div>
+	<div>
+		<div class="frame_angle"></div>
+		<div class="frame_angle"></div>
+		<div class="frame_angle"></div>
+		<div class="frame_angle"></div>
+	</div>
+	<div id="screen_size">
+		<div class="screen_size_angle_square"></div>
+		<div class="screen_size_angle_square"></div>
+		<div class="screen_size_angle_square"></div>
+		<div class="screen_size_angle_square"></div>
+	</div>
+	<div id="doors">
+		<div class="door"></div>
+		<div class="door"></div>
+	</div>
+	<div id="rows_for_cards">
+		<div class="row_for_cards"></div>
+		<div class="row_for_cards"></div>
+		<div class="row_for_cards"></div>
+		<div class="row_for_cards"></div>
+	</div>
+
+	<div id="button_open_menu" class="button_text_on_wood containers_style medium_ropes sound_click"></div>
+	
+	<div id="sounds_container" class="containers_style medium_ropes">
+		<div id="sound_music" value="on">
+			<div id="sound_music_on" class="sound_ico"></div>
+			<div id="sound_music_off" class="sound_ico sound_click"></div>
+		</div>
+		<div id="sound_effects" value="on">
+			<div id="sound_effects_on" class="sound_ico"></div>
+			<div id="sound_effects_off" class="sound_ico sound_click"></div>
+		</div>
+	</div>
+	<div id="select_languages_container">
+		<div class="button_select_languages_container containers_style
+large_ropes">
+			<div class="button_select_languages sound_click button_text_on_wood" value="english">english</div>
+		</div>
+		<div class="button_select_languages_container containers_style
+container_under_container_ropes">
+		<div class="button_select_languages sound_click button_text_on_wood" value="українська">українська</div>
+		</div>
+		<div class="button_select_languages_container containers_style
+container_under_container_ropes">
+		<div class="button_select_languages sound_click button_text_on_wood" value="русский">русский</div>
+		</div>
+	</div>
+	<div id="main_menu" class="containers_style large_ropes">
+		<div id="main_menu_title"></div>
+		<div id="main_menu_button_start" class="main_menu_text main_menu_button"></div>
+		<div id="main_menu_button_restart" class="main_menu_text main_menu_button"></div>
+		<div id="main_menu_button_select_complexity" class="main_menu_text main_menu_button"></div>
+		<div id="main_menu_select_complexity" class="main_menu_text">
+			<div id="main_menu_select_complexity_title"></div>
+			<div class="checkbox_container must_hide"><input type="checkbox" id="game_on_time"><label for="game_on_time" id="game_on_time_label"></label></div>
+			<div class="checkbox_container must_hide"><input type="checkbox" id="game_on_moves"><label for="game_on_moves" id="game_on_moves_label"></label></div>
+			<div class="checkbox_container must_hide"><input type="checkbox" id="game_auto_cards_mixing"><label for="game_auto_cards_mixing" id="game_auto_cards_mixing_label"></label></div>
+		</div>
+		<div id="main_menu_button_open_settings" class="main_menu_text main_menu_button"></div>
+		<div id="main_menu_settings"  class="main_menu_text">
+			<div id="main_menu_settings_title"></div>
+				<div class="checkbox_container must_hide"><input type="checkbox" id="sound_music_checkbox" checked><label for="sound_music" id="sound_music_label"></label></div>
+				<div class="checkbox_container must_hide"><input type="checkbox" id="sound_effects_checkbox" checked><label for="sound_effects" id="sound_effects_label"></label></div>
+				<select id="select_select_languages" class="must_hide">
+					<option value="english">English</option>
+					<option value="українська">Українська</option>
+					<option value="русский">Русский</option>
+				</select>
+				<div id="main_menu_button_close_settings" class="main_menu_text main_menu_button must_hide"></div>
+		</div>
+		<div id="main_menu_button_continue_game" class="main_menu_text main_menu_button"></div>
+	</div>
+	<div id="level_container" class="containers_style medium_ropes">
+		<span id="level_titel"></span>
+		<span id="level"></span>
+	</div>
+
+
+
+	<div id="victory_title" class="victory_lose_title_style"></div>
+	<div id="lose_title" class="victory_lose_title_style"></div>
+	<div id="button_next_level" class="buttons_next_and_restart_level"></div>
+	<div id="button_restart_level" class="buttons_next_and_restart_level"></div>
+	<span id="time_container">
+		<span id="time_container_title"></span>
+		<span id="time"></span>
+	</span>
+	<span id="moves_container">
+		<span id="moves_container_title"></span>
+		<span id="moves"></span>
+	</span>
+</div>
+</div>
+
+<footer class="content">
+		Разработчик Паназдырь Юрий Анатольевич panazdur@ukr.net
+</footer>
+</body>
+</html>
